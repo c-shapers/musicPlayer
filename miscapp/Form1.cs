@@ -134,7 +134,7 @@ namespace miscapp
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
@@ -174,6 +174,8 @@ namespace miscapp
             player.URL = paths[listBoxSongs.SelectedIndex];
 
             bunifuPages1.SetPage(0);
+            timer1.Start();
+            lblTitle.Text = listBoxSongs.SelectedItem.ToString();
             indicator.Top = btnPlaying.Top + 6;
         }
 
@@ -222,6 +224,7 @@ namespace miscapp
 
         private void volume_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
         {
+            player.settings.volume = volume.Value;
 
         }
 
@@ -244,7 +247,34 @@ namespace miscapp
         {
            
         }
-    
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            volume.Value = volume.Maximum;
+            player.settings.volume = volume.Value;
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            volume.Value = volume.Minimum; 
+            player.settings.volume = volume.Value;
+        }
+
+        private void bunifuImageButton1_Click_3(object sender, EventArgs e)
+        {
+            if(listBoxSongs.SelectedIndex<listBoxSongs.Items.Count-1)
+            {
+                listBoxSongs.SelectedIndex = listBoxSongs.SelectedIndex + 1;
+            }
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            if (listBoxSongs.SelectedIndex > 0)
+            {
+                listBoxSongs.SelectedIndex = listBoxSongs.SelectedIndex - 1;
+            }
+        }
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {

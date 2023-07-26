@@ -826,7 +826,7 @@ namespace miscapp
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(33)))), ((int)(((byte)(53)))));
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(121)))));
             this.lblHeader.Location = new System.Drawing.Point(6, 9);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(133, 19);
@@ -887,10 +887,10 @@ namespace miscapp
             this.bunifuPages1.Location = new System.Drawing.Point(209, 40);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage1;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage1";
-            this.bunifuPages1.PageTitle = "Playing";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "Explore";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(640, 421);
             this.bunifuPages1.TabIndex = 2;
@@ -1261,6 +1261,7 @@ namespace miscapp
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 0;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click_3);
             // 
             // player
             // 
@@ -1313,6 +1314,7 @@ namespace miscapp
             this.bunifuImageButton6.WaitOnLoad = false;
             this.bunifuImageButton6.Zoom = 0;
             this.bunifuImageButton6.ZoomSpeed = 10;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.bunifuImageButton6_Click);
             // 
             // bunifuImageButton5
             // 
@@ -1350,6 +1352,7 @@ namespace miscapp
             this.bunifuImageButton5.WaitOnLoad = false;
             this.bunifuImageButton5.Zoom = 0;
             this.bunifuImageButton5.ZoomSpeed = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // volume
             // 
@@ -1401,7 +1404,7 @@ namespace miscapp
             this.bunifuToolTip1.SetToolTip(this.volume, "");
             this.bunifuToolTip1.SetToolTipIcon(this.volume, null);
             this.bunifuToolTip1.SetToolTipTitle(this.volume, "");
-            this.volume.Value = 50;
+            this.volume.Value = 10;
             this.volume.Scroll += new System.EventHandler<Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs>(this.volume_Scroll);
             // 
             // bunifuImageButton4
@@ -1440,6 +1443,7 @@ namespace miscapp
             this.bunifuImageButton4.WaitOnLoad = false;
             this.bunifuImageButton4.Zoom = 0;
             this.bunifuImageButton4.ZoomSpeed = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
             // btnStopPlay
             // 
@@ -1528,7 +1532,8 @@ namespace miscapp
             this.slider.AllowScrollKeysDetection = true;
             this.slider.AllowScrollOptionsMenu = true;
             this.slider.AllowShrinkingOnFocusLost = false;
-            this.slider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.slider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.slider.BackColor = System.Drawing.Color.Transparent;
             this.slider.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slider.BackgroundImage")));
             this.slider.BindingContainer = null;
@@ -1566,7 +1571,7 @@ namespace miscapp
             this.bunifuToolTip1.SetToolTip(this.slider, "");
             this.bunifuToolTip1.SetToolTipIcon(this.slider, null);
             this.bunifuToolTip1.SetToolTipTitle(this.slider, "");
-            this.slider.Value = 50;
+            this.slider.Value = 0;
             this.slider.Scroll += new System.EventHandler<Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs>(this.slider_Scroll);
             this.slider.MouseUp += new System.Windows.Forms.MouseEventHandler(this.slider_MouseUp);
             // 
@@ -1607,7 +1612,6 @@ namespace miscapp
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
